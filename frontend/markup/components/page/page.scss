@@ -1,0 +1,113 @@
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  //align-items: flex-start;
+  min-height: 100vh;
+}
+.page__wrapper {
+  flex-grow: 1;
+}
+.page__header {
+  z-index: 20;
+    position: relative;
+}
+.page__sniw-bg {
+    position: relative;
+
+    background: linear-gradient(180deg, #687cc5 0%, #cf7cca 50%,  #a76cc8 80%, #7562bc 100%);
+
+}
+.page__sniw-bg-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 21%;
+    background-image: url(../img/general/contacts-bg.jpg);
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        height: rem(110);
+        margin-bottom: -6px;
+        background: linear-gradient(to bottom, transparent 0%,  #a76cc8 100%);
+    }
+}
+.page__snow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.page__b-main-contacts {
+    position: relative;
+    z-index: 15;
+}
+.container {
+    z-index: 15;
+    position: relative;
+}
+
+//.page__up {
+//    width: rem(80);
+//    height: rem(80);
+//    border-radius: 50%;
+//    background: rgba(184, 92, 207, 0.6);
+//
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    justify-content: center;
+//
+//    position: fixed;
+//    bottom: 217px;
+//    left: 32px;
+//    opacity: .6;
+//    transition: .2s;
+//    z-index: 1000;
+//    &:hover {
+//        opacity: .8;
+//    }
+//}
+.bvi-copy {
+    display: none;
+}
+html body .bvi-body {
+    * {
+        transition: 0s !important;
+    }
+    .page-up {
+        display: none !important;
+    }
+    .page-header_abs {
+        position: static;
+    }
+    .b-tour-slider__link:after,
+    .b-tour-slider__link:before,
+    .b-main-news__content:before,
+    .b-main-news__link:before,
+    .b-main-news__link:after {
+        display: none;
+    }
+
+    .winternetz {
+        display: none !important;
+    }
+    .container {
+        border: 1px solid;
+        padding: 20px 0;
+    }
+    div[style*='background-image'] {
+        background: transparent !important;
+    }
+
+}

@@ -1,0 +1,36 @@
+//-Modal
+extends ../layouts/default.pug
+include ../components/b-order/b-order_modal
+
+
+include ../components/user-content/user-content
+block vars
+    - var title = 'Modal'
+
+block content
+    .container
+        p(style='padding-top: 150px')
+            a(href='#order', data-toggle='modal')
+                | Оформление заказа
+        //p
+        //    a(href='#text', data-toggle='modal')
+        //        | Текст
+
+
+        // Оформление заказа
+        #order.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog.modal-md(role='document')
+                .modal-content
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+                    .modal-title Оформление заказа
+                    +b-order_modal
+
+
+
+        script.
+            window.addEventListener("load", function (event) {
+                $("#order").modal('show');
+            });
+
+

@@ -1,0 +1,14 @@
+.b-news-section {
+    padding: rem(70) 0 0;
+}
+.b-news-section__title {
+    @include title2;
+    text-align: center;
+    margin-bottom: rem(50);
+}
+.b-news-section__list {
+
+}
+.b-news-section__pagination {
+    margin-top: rem(50);
+}

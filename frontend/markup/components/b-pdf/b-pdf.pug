@@ -1,0 +1,128 @@
+mixin b-pdf(data)
+    +b.b-pdf
+        +e.page
+            +e.top
+                .container
+                    .row
+                        .col-md-2
+                            +e.A.logo(href='/')
+                                +e.IMG.logo(src='__static__img/general/logo-print.png')
+                        .col-md-8
+                            +e.title Карта мероприятий
+            +e.contant
+                .container
+                    +e.TABLE.table
+                        tr
+                            th
+                                +e.th-content
+                                    | Название
+                            th
+                                +e.th-content
+                                    +e.ico
+                                        img(src='__static__img/content/i5.svg')
+                                    | Дата
+                            th
+                                +e.th-content
+                                    +e.ico
+                                        img(src='__static__img/content/i3.svg')
+                                    | Цена
+                            th
+                                +e.th-content
+                                    +e.ico
+                                        img(src='__static__img/content/i6.svg')
+                                    | Время
+                            th
+                                +e.th-content
+                                    +e.ico
+                                        img(src='__static__img/content/i4.svg')
+                                    | Место
+                        each i in (new Array(3))
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content 10.01.2021
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content 10:00
+                                td
+                                    +e.td-content Центральная площадь
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content 10.01.2021
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content 10:00
+                                td
+                                    +e.td-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quo.
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content -
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content -
+                                td
+                                    +e.td-content Центральная площадь
+        +e.page
+            +e.contant
+                .container
+                    +e.TABLE.table
+                        each i in (new Array(12))
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content 10.01.2021
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content 10:00
+                                td
+                                    +e.td-content Центральная площадь
+
+
+        +e.page
+            +e.contant
+                .container
+                    +e.TABLE.table
+                        each i in (new Array(2))
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content 10.01.2021
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content 10:00
+                                td
+                                    +e.td-content Центральная площадь
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content 10.01.2021
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content 10:00
+                                td
+                                    +e.td-content Центральная площадь
+                            tr
+                                td
+                                    +e.td-content Новый год
+                                td
+                                    +e.td-content -
+                                td
+                                    +e.td-content 1000 ₽/человек
+                                td
+                                    +e.td-content -
+                                td
+                                    +e.td-content Центральная площадь

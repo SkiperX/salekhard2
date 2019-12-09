@@ -1,0 +1,20 @@
+mixin b-pagination(data)
+    +b.b-pagination
+        .container
+            .wrap_pagination
+                ul.pagination
+                    li.prev
+                        a(href='javascript:void(0)')
+                            !=  pugHelpers.Icon.call(locals, {iconName: 'back'})
+                            | назад
+
+                    li.active
+                        span 1
+                    li
+                        a(href='javascript:void(0)') 2
+                    li
+                        a(href='javascript:void(0)') 3
+                    li.next
+                        a(href='javascript:void(0)') вперед
+                            !=  pugHelpers.Icon.call(locals, {iconName: 'back'})
+

@@ -1,0 +1,25 @@
+mixin b-event(data)
+    +b.b-event
+        +e.A.link(href='#' style='background-image: url(__static__img/content/e-bg.jpg)')
+            +e.content
+                +e.DIV.type Экскурсия
+                +e.DIV.close
+                    !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+                +e.DIV.date 17 декабря
+                +e.DIV.title Катание на оленях в санях
+                +e.DIV.info
+                    div.row
+                        .col-6
+                            +e.loc
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'pin2'})
+                                | Центральная площадь
+                        .col-md-6
+                            +e.time
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'time'})
+                                | 15:00-17:00
+                +e.DIV.more Читать далее
+                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+
+
+        +e.A.go(href='#') Проложить маршрут
+            !=  pugHelpers.Icon.call(locals, {iconName: 'more'})

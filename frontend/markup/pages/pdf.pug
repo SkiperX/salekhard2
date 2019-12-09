@@ -1,0 +1,20 @@
+//- Pdf
+extends ../layouts/default.pug
+include ../components/b-pdf/b-pdf
+
+block vars
+    - var title = 'Pdf'
+
+block content
+    style.
+        @page {
+            size: 29.7cm 21cm;
+            margin: 0mm 0mm 0mm 0mm;
+        }
+
+        body {
+            background: rgb(204, 204, 204);
+        }
+    +b-pdf
+
+

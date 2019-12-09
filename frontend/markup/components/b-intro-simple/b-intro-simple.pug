@@ -1,0 +1,8 @@
+mixin b-intro-simple(data)
+    - var data = data || {}
+    +b.b-intro-simple
+        .container
+            +e.A.back(href='#' onclick='window.history.back();')
+                !=  pugHelpers.Icon.call(locals, {iconName: 'back'})
+                | Назад
+            +e.title!=data.title

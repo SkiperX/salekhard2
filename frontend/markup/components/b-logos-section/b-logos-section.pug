@@ -1,0 +1,23 @@
+include ../b-pagination/b-pagination
+
+mixin b-logos-section(data)
+    +b.b-logos-section
+        .container
+            +e.list
+                .row
+                    each i in (new Array(3))
+                        .col-6.col-md-4
+                            +e.item
+                                img(src='__static__img/content/l1.png')
+                        .col-6.col-md-4
+                            +e.item
+                                img(src='__static__img/content/l2.png')
+                        .col-6.col-md-4
+                            +e.item
+                                img(src='__static__img/content/l3.png')
+                        .col-6.col-md-4
+                            +e.item
+                                img(src='__static__img/content/l4.png')
+
+        +e.pagination
+            +b-pagination

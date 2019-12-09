@@ -1,0 +1,44 @@
+mixin b-filter_map(data)
+    +b.b-filter._map
+        form
+            .row
+
+                .col-md-4
+                    +e.item
+                        .form-group
+                            .form-label Дата
+                            .form-group__cont.form-group__cont_ico-right
+                                input.form-control.datepicker-here(
+                                data-multiple-dates-separator=" - "
+                                data-range='true'
+                                data-show-event='click'
+                                )
+                                .form-group__ico
+                                    img(src='__static__img/general/calendar-blue.svg')
+                .col-md-4
+                    +e.item
+                        .form-group
+                            .form-label Категория
+                            select.selectric( multiple )#sel1
+                                option(disabled)
+                                option(value='1') Елка1
+                                option(value='2') Елка2
+                                option(value='3') Елка3
+                                option(value='4') Елка4
+                .col-md-4
+                    +e.item
+                        .form-group
+                            .form-label Цена
+                            select.selectric( multiple )#sel2
+                                option(disabled)
+                                option(value='1') 0 - 100
+                                option(value='2') 100 - 100500
+                                option(value='3') 100500 +
+
+                .col-md-4
+                    +e.options
+                        +e.options-item
+                            label.checkbox
+                                input(type='checkbox', checked='')
+                                span В помещении
+        +e.tags

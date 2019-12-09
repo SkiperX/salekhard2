@@ -1,0 +1,16 @@
+@import 'bootstrap-grid';
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/hover";
+@import "bootstrap/scss/mixins/border-radius";
+@import "bootstrap/scss/utilities/borders";
+@import "bootstrap/scss/nav";
+
+@import "swiper/dist/css/swiper";
+@import "lightgallery/src/sass/lightgallery";
+@import "selectric/public/selectric";
+@import "select2/dist/css/select2.min";
+//@import 'fullpage.js/dist/jquery.fullpage';
+@import "air-datepicker/dist/css/datepicker.min";
+@import "aos/src/sass/aos";
+@import "tippy.js/dist/tippy";
+@import "custom-libs";

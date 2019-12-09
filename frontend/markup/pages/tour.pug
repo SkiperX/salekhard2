@@ -1,0 +1,36 @@
+//- Тур отдельно
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_event
+include ../components/b-event-info/b-event-info_tour
+
+block vars
+    - var title = 'Катание с оленями на санях'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_event({
+                bg: '__static__img/content/tour-bg.jpg',
+                title: 'Катание с оленями на санях',
+                btn: 'Заказать'
+            })
+        .page__b-event-info
+            +b-event-info_tour
+
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

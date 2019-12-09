@@ -1,0 +1,37 @@
+.search-page-input{
+width:60%;
+margin: 1.875rem 0 3.125rem;
+}
+.search-page-search-block{
+display:flex;
+flex-wrap:wrap;
+}
+.search-page-button{
+margin-left: 10px;
+}
+.afisha-search-btn{
+margin:unset !important;
+float:right;
+}
+.afisha-search-btn-reset{
+margin:unset !important;
+
+background-color: #3025EB;
+margin-bottom: 10px !important
+
+}
+.afisha-search-btn-reset:hover{
+background-color: #3025EB;
+}
+#form_finish{
+text-align:center;
+}
+.dep_logo_bot{
+    margin-top: -30px;
+}
+.page-header__menu-link{
+padding: 10px 0.2575rem !important;
+}
+.b-intro__about_short{
+max-width:460px;
+}

@@ -1,0 +1,79 @@
+
+.b-map {
+  height: 100%;
+  position: relative;
+}
+.b-map__map {
+  height: 100%;
+}
+.b-map__marker {
+    cursor: pointer;
+    &_active {
+        .b-map__marker-pin {
+            background-image: url("../img/general/pin-active.svg");
+        }
+    }
+}
+.b-map__marker-pin {
+    width: rem(32);
+    height: rem(45);
+    background: url("../img/general/pin.svg");
+    background-size: 100% 100%;
+    position: relative;
+
+
+}
+.b-map__marker-ico {
+    width: rem(25);
+    height: rem(25);
+    @include cover;
+    position: absolute;
+    left: 50%;
+    top: rem(5);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.b-map__marker-title {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: -5px;
+
+    font-weight: 500;
+    font-size: rem(20);
+    color: #2443BE;
+
+    border-radius: 5px;
+    background: #FFFFFF;
+    padding: 5px 8px;
+    white-space: nowrap;
+}
+
+@include media-breakpoint-down(md) {
+  .b-map-section {
+    min-height: 100vh;
+  }
+  .b-map__info {
+    display: none;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .b-map__link {
+    margin-left: 10px;
+  }
+  .b-map__marker_static {
+    margin-left: 23px;
+  }
+}
+.b-map__event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 492px;
+    width: 100%;
+    pointer-events: none;
+}
+@include media-breakpoint-down(md) {
+    //position: relative;
+}

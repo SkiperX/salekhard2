@@ -1,0 +1,35 @@
+//- Новости
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_left-col
+include ../components/b-news-section/b-news-section
+
+block vars
+    - var title = 'Новости'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_left-col({
+                bg: '__static__img/content/news-bg.jpg',
+                title: 'Новости',
+                text: '<p>Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа.</p><p>Город расположен на Полуйской возвышенности Западно-Сибирской равнины при впадении реки Полуй в Обь, в 2436 км от Москвы.</p>'
+            })
+        .page__b-news-section
+            +b-news-section
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

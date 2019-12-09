@@ -1,0 +1,57 @@
+include ../b-map/b-map
+include ../b-filter/b-filter_map
+
+mixin b-event-map(data)
+    +b.b-event-map
+        .container
+            +e.title Поиск приключений
+            +e.filter
+                +b-filter_map
+            .container
+                script.
+                    var MapPathToStatic = '__static__'
+                    var bEventMapMarkersJson = `{
+                            "markers": [
+                                {
+                                    "id": 0,
+                                    "lat": 66.54136593800693,
+                                    "lng": 66.64177813256833,
+                                    "title": "Катание на оленях в санях",
+                                    "type": "Экскурсия",
+                                    "date": "17 декабря",
+                                    "loc": "Центральная площадь",
+                                    "time": "15:00-17:00",
+                                    "bg": "static/img/content/e-bg.jpg",
+                                    "url": "#",
+                                    "filter": "2"
+                                },
+                                {
+                                    "id": 1,
+                                    "lat": 66.550093,
+                                    "lng": 66.602811,
+                                    "title": "Lorem ipsum dolor sit amet.",
+                                    "type": "Экскурсия",
+                                    "date": "17 декабря",
+                                    "loc": "Центральная площадь",
+                                    "time": "15:00-17:00",
+                                    "bg": "http://placekitten.com/492/780",
+                                    "url": "#",
+                                    "filter": "1, 2"
+                                },
+                                {
+                                    "id": 2,
+                                    "lat": 66.55940013543896,
+                                    "lng": 66.58066668237302,
+                                    "title": "Lorem ipsum dolor sit amet, consectetur.",
+                                    "type": "Экскурсия",
+                                    "date": "17 декабря",
+                                    "loc": "Центральная площадь",
+                                    "time": "15:00-17:00",
+                                    "bg": "http://placekitten.com/492/781",
+                                    "url": "#",
+                                    "filter": "2,3"
+                                }
+                            ]
+                            }`
+                +e.map.bvi-hide
+                    +b-map

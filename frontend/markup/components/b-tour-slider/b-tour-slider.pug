@@ -1,0 +1,68 @@
+include ../b-space/b-space
+mixin b-tour-slider(data)
+    +b.b-tour-slider
+        +e.space.bvi-hide
+            +b-space
+        .container
+            .text-center
+                +e.pre-title(data-aos="fade-up" data-aos-delay="50") НОВОГОДНИЕ ТУРЫ
+                +e.title(data-aos="fade-up" data-aos-delay="150") С НАМИ НЕ СОСКУЧИШЬСЯ
+                +e.text(data-aos="fade-up" data-aos-delay="250")
+                    p.
+                        Всегда хотели прокатиться на оленях или посмотреть<br>
+                        на северное сияние?<br>
+                        Тогда Вы попали куда надо!
+                +e.A.btn(href='#' data-aos="fade-up" data-aos-delay="350") Смотреть все
+
+
+            +e.slider(data-aos="fade-up" data-aos-delay="450")
+                +e.nav-cont
+                    +e.nav
+                        .swiper-button-prev
+                            !=  pugHelpers.Icon.call(locals, {iconName: 'swiper'})
+                        .swiper-button-next
+                            !=  pugHelpers.Icon.call(locals, {iconName: 'swiper'})
+
+
+                .swiper-container
+                    .swiper-wrapper
+                        each i in (new Array(2))
+                            .swiper-slide
+                                +e.A.slide(href='#')
+                                    +e.DIV.img.bvi-hide(style='background-image: url(__static__img/content/t1.jpg)')
+                                        +e.mask
+                                            !=  pugHelpers.Icon.call(locals, {iconName: 'tour-mask'})
+                                    +e.DIV.content
+                                        +e.content-row
+                                            +e.content-col
+                                                +e.name Катание на оленях в санях
+                                            +e.content-col
+                                                +e.link Читать далее
+                                                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+                            .swiper-slide
+                                +e.A.slide(href='#')
+                                    +e.DIV.img.bvi-hide(style='background-image: url(__static__img/content/t2.jpg)')
+                                        +e.mask
+                                            !=  pugHelpers.Icon.call(locals, {iconName: 'tour-mask'})
+                                    +e.DIV.content
+                                        +e.content-row
+                                            +e.content-col
+                                                +e.name Катание на оленях в санях
+                                            +e.content-col
+                                                +e.link Читать далее
+                                                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+                            .swiper-slide
+                                +e.A.slide(href='#')
+                                    +e.DIV.img.bvi-hide(style='background-image: url(__static__img/content/t3.jpg)')
+                                        +e.mask
+                                            !=  pugHelpers.Icon.call(locals, {iconName: 'tour-mask'})
+                                    +e.DIV.content
+                                        +e.content-row
+                                            +e.content-col
+                                                +e.name Катание на оленях в санях
+                                            +e.content-col
+                                                +e.link Читать далее
+                                                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+
+
+

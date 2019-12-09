@@ -1,0 +1,32 @@
+mixin b-form-section(data)
+    +b.b-form-section
+        .container
+            form
+                +e.title НАЧНИ СЕЙЧАС
+                +e.title2 ПРИСОЕДИНИТЬСЯ
+                .row
+                    .col-lg-4
+                        +e.text Запишись на свою первую бесплатную тренировку. Оставь свои контакты, и мы перезвоним, чтобы договориться о дате и времени.
+
+                    .col-md-6.col-lg-4
+                        .form-group
+                            input.form-control.form-control_transparent(type='text', name='', placeholder='Имя')
+                            img.form-group__ico(src='%=static=%img/general/person.svg', alt='')
+                        .form-group
+                            input.form-control.form-control_transparent(type='tel', name='', placeholder='Телефон')
+                            img.form-group__ico(src='%=static=%img/general/tel.svg', alt='')
+
+
+                    .col-md-6.col-lg-4
+                        +e.spda
+                            label.checkbox.checkbox_transparent
+                                input(type='checkbox')
+                                span <a href='/agreement', target='_blank'>Согласие на обработку персональных данных</a>
+                        +e.BUTTON.btn(type='bubmit') Присоединиться
+
+
+
+
+
+
+

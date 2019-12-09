@@ -1,0 +1,27 @@
+mixin b-contacts(data)
+    +b.b-contacts
+        +e.title Контакты
+        .row
+            .col-md-4
+                +e.item
+                    +e.col-title По вопросам
+                    +e.A.tel(href='tel:8(900)-001-12-24')
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'tel'})
+                        | 8(900)-001-12-24
+                    +e.A.mail(href='mailto:pochta1234@mail.ru')
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'mail'})
+                        | pochta1234@mail.ru
+            .col-md-4
+                +e.item
+                    +e.col-title Адрес
+                    +e.address Г. Салерхард, улица Новогодняя, дом 3
+            .col-md-4
+                +e.item
+                    +e.col-title Мы в соц.сетях
+                    +e.soc
+                        +e.A.soc-link._fb(href='#' target='_blank')
+                            img(src='__static__img/general/fb.svg')
+                        +e.A.soc-link._vk(href='#' target='_blank')
+                            img(src='__static__img/general/vk.svg')
+                        +e.A.soc-link._inst(href='#' target='_blank')
+                            img(src='__static__img/general/inst.svg')

@@ -1,0 +1,36 @@
+//- Туры
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_right-col
+include ../components/b-tours-section/b-tours-section
+
+block vars
+    - var title = 'Туры'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_right-col({
+                modeList: ['text-right'],
+                bg: '__static__img/content/tour-bg.jpg',
+                title: 'Туры',
+                text: '<p>Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа.</p>'
+            })
+        .page__b-tours-section
+            +b-tours-section
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

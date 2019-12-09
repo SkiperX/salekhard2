@@ -1,0 +1,36 @@
+//- Афиша отдельно
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_event
+include ../components/b-event-info/b-event-info
+
+block vars
+    - var title = 'Новогодняя елка'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_event({
+                bg: '__static__img/content/event-bg.jpg',
+                title: 'Новогодняя елка',
+                btn: 'Заказать'
+            })
+        .page__b-event-info
+            +b-event-info
+
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

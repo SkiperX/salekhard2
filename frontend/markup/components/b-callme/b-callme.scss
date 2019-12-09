@@ -1,0 +1,27 @@
+.b-callme {
+    background: url(../img/general/form-bg.jpg);
+    @include cover;
+    padding: rem(70) rem(40);
+}
+.b-callme__item {
+    max-width: 520px;
+    &:not(:last-child) {
+        margin-bottom: rem(48);
+    }
+}
+.b-callme__file-btn {
+    margin-bottom: 30px;
+}
+.b-callme__btn {
+    @include btn;
+    @include btn-size-medium;
+}
+.b-callme__col-right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.b-callme__politica {
+    margin-top: auto;
+}

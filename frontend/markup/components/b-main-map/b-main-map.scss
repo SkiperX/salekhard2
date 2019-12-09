@@ -1,0 +1,76 @@
+.b-main-map {
+    //background: linear-gradient(180deg,  #687cc5 0%, #c674c9  100%);
+    padding: rem(210) 0 rem(50);
+    position: relative;
+}
+.b-main-map__container {
+    position: relative;
+}
+.b-main-map__snow {
+    position: absolute;
+    background: url("../img/general/snow-w.png");
+    background-size: 100% 100%;
+    &_1 {
+        width: rem(80);
+        height: rem(80);
+        top: -130px;
+        right: 230px;
+    }
+    &_2 {
+        width: rem(40);
+        height: rem(40);
+        top: 60px;
+        left: 0;
+    }
+    &_3 {
+        width: rem(80);
+        height: rem(80);
+        top: 80px;
+        left: 80px;
+    }
+}
+.b-main-map__pre-title {
+    @include pre-title;
+    color: #FAFF00;
+    margin-bottom: rem(8);
+}
+.b-main-map__title {
+    @include title;
+    margin-bottom: rem(24);
+}
+.b-main-map__filter {
+    text-align: center;
+    margin: 0 rem(-15) rem(38);
+}
+.b-main-map__filter-btn {
+    display: inline-block;
+    vertical-align: top;
+    margin: rem(15);
+    @include btn;
+    &:nth-child(4n) {
+        @include btn-blue;
+    }
+    &:nth-child(4n-1) {
+        @include btn-violet;
+    }
+    &:nth-child(4n-2) {
+        @include btn-lightblue;
+    }
+    &:nth-child(4n-3) {
+        @include btn-orange;
+    }
+}
+.b-main-map__map {
+    height: rem(621);
+    background: #eee;
+    margin-bottom: rem(41);
+}
+.b-main-map__btn {
+    @include btn;
+    @include btn-green;
+}
+@include media-breakpoint-down(md) {
+    .b-main-map {
+        padding: rem(50) 0;
+    }
+}

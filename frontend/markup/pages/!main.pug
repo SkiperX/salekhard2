@@ -1,0 +1,57 @@
+//-Главная
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-main/b-main
+include ../components/b-info/b-info
+include ../components/b-main-events/b-main-events
+include ../components/b-tour-slider/b-tour-slider
+include ../components/b-main-news/b-main-news
+include ../components/b-main-logos/b-main-logos
+include ../components/b-main-map/b-main-map
+include ../components/b-main-contacts/b-main-contacts
+include ../components/b-snow/b-snow
+include ../components/b-snow-big/b-snow-big
+block vars
+    - var title = 'Главная'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-main
+            +b-main
+        .page__b-info
+            +b-info
+        .page__b-main-events
+            +b-main-events
+        .page__b-tour-slider
+            +b-tour-slider
+        .page__b-main-news
+            +b-main-news
+        .page__b-main-logos
+            +b-main-logos
+        .page__sniw-bg
+            .page__sniw-bg-img.bvi-hide
+            .page__snow.bvi-hide
+                +b-snow
+            .page__b-main-map
+                +b-main-map
+            .page__b-main-contacts
+                +b-main-contacts
+        .page__snow-big.bvi-hide
+            +b-snow-big
+
+    .page__footer
+        +page-footer
+
+
+
+
+
+
+
+

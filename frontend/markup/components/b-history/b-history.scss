@@ -1,0 +1,14 @@
+.b-history {
+    padding: rem(80) 0 0;
+}
+.b-history__title {
+    @include title2;
+    margin-bottom: rem(40);
+}
+.b-history__text {
+
+}
+.b-history__slider {
+    margin-top:rem(80);
+}
+

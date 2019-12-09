@@ -1,0 +1,22 @@
+.b-filter {
+    @include white-select;
+    @include selectric-multy;
+}
+.b-filter__item {
+
+}
+.b-filter__options {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -15px;
+}
+.b-filter__options-item {
+    margin: 15px;
+}
+
+.b-filter__tags {
+
+    min-height: rem(40);
+}

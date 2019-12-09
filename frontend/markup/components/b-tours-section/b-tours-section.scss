@@ -1,0 +1,71 @@
+.b-tours-section {
+    padding: rem(70) 0 0;
+}
+.b-tours-section__title {
+    @include title2;
+    text-align: center;
+    margin-bottom: rem(35);
+}
+.b-tours-section__filter {
+    text-align: center;
+    margin-bottom: rem(55);
+}
+.b-tours-section__filter-btn {
+    display: inline-block;
+    margin: 15px;
+
+    @include btn;
+
+    font-size: 18px;
+    border: 2px solid transparent;
+
+    &:nth-child(4n) {
+        border-color: #6C7AF9;
+        color: #6C7AF9;
+    }
+    &:nth-child(4n-1) {
+        border-color: #E290FF;
+        color: #E290FF;
+    }
+    &:nth-child(4n-2) {
+        border-color: #71D3F2;
+        color: #71D3F2;
+    }
+    &:nth-child(4n-3) {
+        border-color: #FF9292;
+        color: #FF9292;
+    }
+
+    &_active {
+        color: #fff !important;
+        &:nth-child(4n) {
+            background: #6C7AF9;
+        }
+        &:nth-child(4n-1) {
+            background: #E290FF;
+        }
+        &:nth-child(4n-2) {
+            background: #71D3F2;
+        }
+        &:nth-child(4n-3) {
+            background: #FF9292;
+        }
+    }
+}
+.b-tours-section__filter-btn_active {
+
+}
+
+.b-tours-section__pagination {
+    margin-top: rem(50);
+}
+@include media-breakpoint-down(ms) {
+    .b-cards-list__col-right {
+        padding-left: 20px;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .b-tours-section__filter-btn {
+        font-size: 16px;
+    }
+}

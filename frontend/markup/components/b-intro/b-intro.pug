@@ -1,0 +1,13 @@
+mixin b-intro(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n=> mode+= `_${n} `)
+
+    +b.b-intro(class=mode style=`background-image: url(${data.bg})`)
+        .container
+
+            +e.title!=data.title
+            +e.text!=data.text
+

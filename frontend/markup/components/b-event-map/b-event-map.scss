@@ -1,0 +1,17 @@
+.b-event-map {
+    padding: rem(70) 0 0;
+    background: linear-gradient(to bottom, #f9fafe 0%, #fff 100%);
+}
+.b-event-map__title {
+    @include title2;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.b-event-map__filter {
+
+}
+.b-event-map__map {
+    height: rem(780);
+    box-shadow: 0px 0px 30px #B1C1FF;
+    margin-top: 30px;
+}

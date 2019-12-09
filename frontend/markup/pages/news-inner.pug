@@ -1,0 +1,33 @@
+//- Новости внутренняя
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro-simple/b-intro-simple
+include ../components/b-news-section/b-news-section
+include ../components/b-news-inner/b-news-inner
+block vars
+    - var title = 'Новости'
+
+block content
+    .page__header
+        +page-header({
+
+        })
+    .page__wrapper
+        .page__b-intro-simple
+            +b-intro-simple({
+                title: 'Новости'
+            })
+        .page__b-news-inner
+            +b-news-inner
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

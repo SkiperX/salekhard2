@@ -1,0 +1,31 @@
+//- Контакты
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro-simple/b-intro-simple
+include ../components/b-contacts/b-contacts_light
+block vars
+    - var title = 'Контакты'
+
+block content
+    .page__header
+        +page-header({
+
+        })
+    .page__wrapper
+        .page__b-intro-simple
+            +b-intro-simple({
+                title: 'Контакты'
+            })
+        .page__b-contacts_light
+            +b-contacts_light
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

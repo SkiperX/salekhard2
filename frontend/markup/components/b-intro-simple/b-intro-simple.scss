@@ -1,0 +1,31 @@
+.b-intro-simple {
+    padding: rem(125) 0 rem(64);
+}
+.b-intro-simple__back {
+    font-size: rem(20);
+    color: #2443BE;
+    display: inline-flex;
+    align-items: center;
+    svg {
+        margin-right: rem(20);
+        flex-shrink: 0;
+    }
+}
+.b-intro-simple__title {
+    font-weight: 900;
+    font-size: rem(40);
+    text-align: center;
+    color: #2443BE;
+}
+.bvi-body {
+    .b-intro-simple__back {
+        svg {
+            display: none;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .b-intro-simple {
+        padding: rem(64) 0;
+    }
+}

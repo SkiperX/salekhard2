@@ -1,0 +1,16 @@
+mixin b-main(data)
+    +b.b-main(
+    style='background-image: url(__static__img/content/main-bg.jpg)'
+    data-scrollax-parent='true'
+    )
+        .container
+            +e.title(
+            data-scrollax="properties: { 'translateY': '400%', 'opacity': 1.5 }"
+            ) Новый год<br> в Салехарде
+            .text-center(
+            data-scrollax="properties: { 'translateY': '1000%', 'opacity': 1.5 }"
+            )
+                +e.A.btn Найти мероприятие
+        +e.mask(
+            data-scrollax="properties: { 'translateX': '-8%' }"
+        )

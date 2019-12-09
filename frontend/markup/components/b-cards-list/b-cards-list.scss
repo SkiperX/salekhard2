@@ -1,0 +1,281 @@
+.b-cards-list {
+
+}
+.b-cards-list__items {
+
+}
+.b-cards-list__item {
+    display: block;
+    margin-bottom: 30px;
+    background: linear-gradient(96.88deg, #5F38CE 8.59%, #0974D8 102.97%);
+    position: relative;
+    color: #FFFFFF;
+    padding-bottom: rem(30);
+    border-radius: 10px;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @include cover;
+        opacity: 1;
+    }
+    &:nth-child(3n-2) {
+        &:before {
+            background-image: url("../img/general/cart-bg5.jpg");
+
+        }
+    }
+    &:nth-child(3n-1) {
+        background: linear-gradient(96.88deg, #6039CF 8.59%, #BB09D8 102.97%);
+        &:before {
+            background-image: url("../img/general/card-bg4.jpg");
+        }
+    }
+    &:nth-child(3n) {
+        background: linear-gradient(98.4deg, #B40DD8 8.98%, #DC812D 163.14%);
+        &:before {
+            background-image: url("../img/general/card-bg3.jpg");
+        }
+    }
+}
+.b-cards-list__col-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.b-cards-list__col-right {
+    padding: rem(30) 0 0;
+    padding-right: 20px;
+    height: 100%;
+}
+.b-cards-list__img-cont {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 20px;
+    @supports (clip-path: ellipse(65% 100% at 35% 0%)) {
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
+
+.b-cards-list__img {
+    padding-bottom: 47%;
+    @include cover;
+    clip-path: ellipse(65% 100% at 35% 0%);
+}
+.b-cards-list__age-cont {
+    margin-left: rem(21);
+}
+.b-cards-list__age {
+    min-width: rem(62);
+    height: rem(62);
+    border: 1px solid #fff;
+    border-radius: rem(31);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-weight: 600;
+    font-size: rem(30);
+}
+.b-cards-list__date {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: rem(60);
+    background: #3025EB;
+    padding: rem(9) rem(55);
+    margin-bottom: rem(23);
+    flex-shrink: 0;
+}
+.b-cards-list__title {
+    font-weight: bold;
+    font-size: rem(30);
+    color: #FFFFFF;
+    margin-bottom: rem(23);
+}
+.b-cards-list__price {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: rem(23);
+    display: flex;
+    align-items: center;
+    span {
+        font-weight: 600;
+        font-size: rem(24);
+        margin-right: 5px;
+    }
+    svg {
+        margin-right: 15px;
+    }
+}
+.b-cards-list__desc {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: rem(35);
+}
+.b-cards-list__more {
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    fill: #fff;
+    svg {
+        margin-left: 10px;
+    }
+}
+.b-cards-list_news {
+    .b-cards-list__mask {
+        transform: scale(-1 , 1);
+    }
+    .b-cards-list__col-right {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+    .b-cards-list__date-news {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-size: rem(20);
+        fill: #5BF592;
+        margin-bottom: rem(30);
+        svg {
+            margin-right: 10px;
+        }
+    }
+    .b-cards-list__img-cont {
+        padding-left: 0;
+        padding-right: 20px;
+        padding-top: 20px;
+        @supports (clip-path: ellipse(65% 100% at 35% 0%)) {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .b-cards-list__img {
+        clip-path: ellipse(65% 100% at 66% 0%);
+    }
+}
+.b-cards-list_events {
+
+    .b-cards-list__col-right {
+        padding-right: 0;
+        padding-left: 30px;
+    }
+
+    .b-cards-list__img-cont {
+        padding-left: 0;
+        padding-right: 20px;
+        padding-top: 20px;
+        @supports (clip-path: ellipse(65% 100% at 35% 0%)) {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .b-cards-list__img {
+        clip-path: ellipse(67% 105% at 68% -6%)
+    }
+    .b-cards-list__age-cont {
+        text-align: right;
+        margin-right: 30px;
+    }
+    .b-cards-list__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .b-cards-list__date {
+        margin-right: rem(40);
+        padding-left: rem(34);
+        padding-right: rem(34);
+    }
+    .b-cards-list__icons {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .b-cards-list__ico {
+        background: #83EDE3;
+        width: rem(44);
+        height: rem(45);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: rem(11);
+        margin-bottom: rem(11);
+        img {
+            width: 70%;
+            height: 70%;
+            display: block;
+        }
+        &:nth-child(2n) {
+            background: #D3B1FD;
+        }
+    }
+    .b-cards-list__type {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        z-index: 15;
+
+        background: linear-gradient(90deg, #E290FF 0%, #FFD540 113.28%), #C4C4C4;
+        border-radius: 0px 0px 0px 10px;
+        padding: rem(23) rem(37);
+
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    .b-cards-list__loc {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-size: 16px;
+        color: #fff;
+        svg {
+            margin-right: rem(8);
+            flex-shrink: 0;
+        }
+    }
+    .b-cards-list__time {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-size: 16px;
+        color: #fff;
+        svg {
+            margin-right: rem(8);
+        }
+    }
+    .b-cards-list__info {
+        margin-bottom: rem(26);
+    }
+}
+@include media-breakpoint-down(md) {
+    .b-cards-list__top {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .b-cards-list__img-col {
+        order: -10;
+    }
+    .b-cards-list__col-right {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}

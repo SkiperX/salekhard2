@@ -1,0 +1,45 @@
+.b-senks {
+
+    padding: 30px;
+    text-align: center;
+}
+.b-senks__svg {
+    border: 1px solid #dce1f5;
+    max-width: 160px;
+}
+
+.b-senks__title {
+   @include title2;
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.b-senks__text {
+    font-size: 18px;
+    text-align: center;
+    color: #272727;
+    margin: 0 auto;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+.b-senks__tel {
+    font-size: 22px;
+    display: block;
+    color: #fff;
+    span {
+        font-weight: 300;
+        color: #fff !important;
+    }
+    &:hover {
+        color: #D6B37E;
+    }
+}
+
+.modal-body:not(.modal-body_light),
+.b-form-section {
+    .b-senks * {
+        color: #fff !important;
+    }
+}

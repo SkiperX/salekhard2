@@ -1,0 +1,29 @@
+mixin b-news-inner(data)
+    +b.b-news-inner
+        .container
+            .row
+                .col-md-6
+                    .js-left
+                        +e.images.lightgallery
+                            +e.A.img-link(href='http://placekitten.com/900/600')
+                                +e.DIV.img(style=`background-image: url(__static__img/content/n4.jpg)`)
+                            +e.A.img-link(href='http://placekitten.com/900/601')
+                                +e.DIV.img(style=`background-image: url(__static__img/content/n5.jpg)`)
+                            +e.A.img-link(href='http://placekitten.com/900/602')
+                                +e.DIV.img(style=`background-image: url(__static__img/content/n6.jpg)`)
+                            +e.A.img-link(href='http://placekitten.com/900/603')
+                                +e.DIV.img(style=`background-image: url(__static__img/content/n7.jpg)`)
+                            +e.A.img-link(href='http://placekitten.com/900/604')
+                                +e.DIV.img(style=`background-image: url(__static__img/content/n8.jpg)`)
+                .col-md-6
+                    +e.date
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'calendar'})
+                        | 15.12.2020
+                    +e.title Катание на оленях в санях
+                    +e.text.user-content
+                        p Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа, один из немногих российских административных центров субъектов федерации
+
+                        p Атомный ледокол «Урал» будет достроен и сдан заказчику в августе 2022 года. Об этом сообщает пресс-служба Минпромторга. Это ледокол нового поколения, который создаётся для обеспечения круглогодичной навигации по Северному морскому пути. Как отмечают эксперты, «Урал» сможет решать задачи проводки как в океане, так и в устьях рек, при этом «прорывными» станут суда проекта «Лидер» — самые крупные и мощные в мире.
+
+                        p Атомный ледокол «Урал» будет достроен и сдан заказчику в августе 2022 года. Об этом сообщает пресс-служба Минпромторга. Это ледокол нового поколения, который создаётся для обеспечения круглогодичной навигации по Северному морскому пути. Как отмечают эксперты, «Урал» сможет решать задачи проводки как в океане, так и в устьях рек, при этом «прорывными» станут суда проекта «Лидер» — самые крупные и мощные в мире.
+

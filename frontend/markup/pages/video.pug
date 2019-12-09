@@ -1,0 +1,44 @@
+//- Видео
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_right-col
+include ../components/b-gallery/b-gallery_video
+include ../components/b-video-modal/b-video-modal
+block vars
+    - var title = 'Галерея'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_right-col({
+                modeList: ['text-right'],
+                bg: '__static__img/content/gallery-bg.jpg',
+                title: 'Галерея',
+                text: '<p>Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа.</p>'
+            })
+        .page__b-gallery
+            +b-gallery_video
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+
+    // Видео
+    #video.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+        .modal-dialog.modal-lg(role='document')
+            .modal-content.modal-content_beige.modal-content_video
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+
+                +b-video-modal

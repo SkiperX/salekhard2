@@ -1,0 +1,116 @@
+.b-main-contacts {
+    //background: linear-gradient(180deg,  #cf7cca 0%, #7863be  100%);
+
+
+    padding: rem(50) 0 rem(142);
+    color: #FFFFFF;
+
+}
+.b-main-contacts__violet {
+    background: rgba(166, 6, 222, 0.4);
+    background-blend-mode: multiply;
+    border-radius: 10px;
+    padding: rem(42) 20px rem(60);
+    margin-bottom: rem(128);
+}
+.b-main-contacts__content {
+    margin: 0 auto;
+    max-width: 920px;
+}
+.b-main-contacts__title {
+    font-weight: 900;
+    font-size: rem(20);
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: rem(45);
+}
+.b-main-contacts__col-title {
+    font-weight: 500;
+    font-size: rem(20);
+    margin-bottom: rem(20);
+}
+.b-main-contacts__tel {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(11);
+    fill: white;
+    svg {
+        margin-right: rem(17);
+    }
+}
+
+.b-main-contacts__mail {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    fill: white;
+    svg {
+        margin-right: rem(17);
+    }
+}
+.b-main-contacts__address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #fff;
+}
+.b-main-contacts__logos {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 580px;
+}
+.b-main-contacts__logo {
+
+}
+.b-main-contacts__soc {
+
+}
+.b-main-contacts__soc-link {
+    width: rem(34);
+    height: rem(34);
+
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    vertical-align: top;
+    margin-right: rem(21);
+    margin-bottom: rem(21);
+    border-radius: 50%;
+    img {
+        display: block;
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+.b-main-contacts__soc-link_fb {
+    background: #3F65A6;
+}
+.b-main-contacts__soc-link_vk {
+    background: #4D76A1;
+}
+.b-main-contacts__soc-link_inst {
+    background: #BC2A8D;
+}
+
+@include media-breakpoint-down(sm) {
+    .b-main-contacts__item {
+        margin-bottom: 30px;
+    }
+    .b-main-contacts__soc-link {
+        width: 30px;
+        height: 30px;
+    }
+    .b-main-contacts__violet {
+        padding: 30px 20px 0;
+        margin-bottom: 40px;
+    }
+    .b-main-contacts__title {
+        margin-bottom: 20px;
+
+    }
+}

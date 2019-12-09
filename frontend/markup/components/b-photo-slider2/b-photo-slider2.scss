@@ -1,0 +1,30 @@
+.b-photo-slider2 {
+    position: relative;
+    @include swiper-btn;
+    @include swiper-btn-abs;
+    .swiper-slide {
+        width: 50vw;
+        max-width: rem(939);
+    }
+}
+.b-photo-slider2__slide {
+    height: 100%;
+    border-radius: rem(10);
+    overflow: hidden;
+}
+.b-photo-slider2__link {
+    height: 100%;
+    display: block;
+    &:hover {
+        .b-photo-slider2__img {
+            transform: scale(1.05);
+        }
+    }
+}
+.b-photo-slider2__img {
+    padding-bottom: 50%;
+    @include cover;
+    @include zoom;
+    transform-origin: bottom;
+    transition: 0.6s;
+}

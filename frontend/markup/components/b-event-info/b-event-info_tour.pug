@@ -1,0 +1,37 @@
+include ../b-photo-slider2/b-photo-slider2
+include ../b-order/b-order
+
+mixin b-event-info_tour(data)
+    +b.b-event-info._tour
+        .container
+            .row
+
+                .col-md-7
+                    +e.col-right
+                        +e.title Информация <br> о мероприятии
+                        +e.text
+                            p Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа, один из немногих российских административных центров субъектов федерации
+                .col-md-5
+                    +e.white
+                        +e.list
+                            +e.item
+                                +e.ico
+                                    img(src='__static__img/content/i3.svg')
+                                +e.val <b>1200</b> ₽/человек
+                            +e.item
+                                +e.ico
+                                    img(src='__static__img/content/i4.svg')
+                                +e.val Центральная площадь
+                            +e.item
+                                +e.ico
+                                    img(src='__static__img/content/i5.svg')
+                                +e.val <b>31</b> декабря
+                            +e.item
+                                +e.ico
+                                    img(src='__static__img/content/i6.svg')
+                                +e.val 15:00-19:00
+            +e.slider
+                +b-photo-slider2
+            +e.title._bottom Оформление заказа
+            +e.form
+                +b-order

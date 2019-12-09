@@ -1,0 +1,52 @@
+.b-about {
+    padding-top: 15px;
+}
+.b-about__title {
+    @include title2;
+    margin-bottom: 20px;
+}
+.b-about__row {
+    align-items: center;
+}
+.b-about__text {
+
+}
+.b-about__map {
+   position: relative;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+.b-about__shadow {
+    filter: drop-shadow( -1px 1px 0px #4646ab);
+}
+.b-about__pin {
+    width: rem(20);
+    height: rem(20);
+    background: #07FFD2;
+    border-radius: 50%;
+    position: absolute;
+    top: 43.5%;
+    left: 41.7%;
+    z-index: 15;
+}
+.b-about__label {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: rem(20);
+    font-weight: 500;
+    font-size: rem(28);
+    color: #FFFFFF;
+    background: #07FFD2;
+    border-radius: rem(40);
+    padding: rem(10) rem(30);
+}
+
+.b-about__icons {
+    background: url(../img/general/ico-bg.jpg);
+    @include cover;
+    padding: rem(40) 0;
+    margin-top: rem(40);
+}

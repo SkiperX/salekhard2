@@ -1,0 +1,17 @@
+mixin b-intro_event(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n=> mode+= `_${n} `)
+
+    +b.b-intro(class=mode style=`background-image: url(${data.bg})`)
+        .container
+            .row
+                .col-md-7
+                    +e.title!=data.title
+                    if data.text
+                        +e.text!=data.text
+                    if data.btn
+                        +e.A.btn(href='#')!=data.btn
+

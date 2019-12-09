@@ -1,0 +1,37 @@
+include ../b-pagination/b-pagination
+include ../b-video/b-video
+
+mixin b-gallery_video(data)
+    +b.b-gallery
+        .container
+            +e.title Галерея
+            +e.btns
+                +e.A.btn(href='#') Фото
+                +e.A.btn._active(href='#') Видео
+            +e.slider
+                +e.slider-top
+                    .swiper-container.gallery-top
+                        .swiper-wrapper
+                            each i in (new Array(8))
+                                .swiper-slide
+                                    +e.video
+                                        +b-video
+
+
+                    // Add Arrows
+                    .swiper-button-next.swiper-button-white
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'swiper'})
+                    .swiper-button-prev.swiper-button-white
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'swiper'})
+                +e.gallery-thumbs.swiper-container.gallery-thumbs
+                    .swiper-wrapper
+                        each i in [1,2]
+                            .swiper-slide
+                                +e.thumbs(style='background-image:url(__static__img/content/v1.jpg)')
+                            .swiper-slide
+                                +e.thumbs(style='background-image:url(__static__img/content/v2.jpg)')
+                            .swiper-slide
+                                +e.thumbs(style='background-image:url(__static__img/content/v3.jpg)')
+                            .swiper-slide
+                                +e.thumbs(style='background-image:url(__static__img/content/v4.jpg)')
+

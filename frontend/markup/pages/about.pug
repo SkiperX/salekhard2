@@ -1,0 +1,37 @@
+//- О Салехарде
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_left-col
+include ../components/b-about/b-about
+include ../components/b-history/b-history
+block vars
+    - var title = 'О Салехарде'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_left-col({
+                bg: '__static__img/content/about-bg.jpg',
+                title: 'О Салехарде',
+                text: '<p>Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа.</p><p>Город расположен на Полуйской возвышенности Западно-Сибирской равнины при впадении реки Полуй в Обь, в 2436 км от Москвы.</p>'
+            })
+        .page__b-about
+            +b-about
+        .page__b-history
+            +b-history
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

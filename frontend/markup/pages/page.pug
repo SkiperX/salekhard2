@@ -1,0 +1,28 @@
+//- Текстовая страница
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer.pug
+include ../components/b-intro-simple/b-intro-simple
+include ../components/user-content/user-content
+block vars
+    - var title = 'Page'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['bg']
+        })
+    .page__wrapper
+        .page__b-intro-simple
+            +b-intro-simple({
+                title: 'Политика конфиденциальности'
+            })
+        .page__content
+            .container
+                +user-content
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })

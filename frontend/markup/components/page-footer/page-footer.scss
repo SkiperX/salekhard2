@@ -1,0 +1,123 @@
+.page-footer {
+    background: linear-gradient(1.72deg, #444491 -23.12%, #4646AB 56.36%), #3D3D9A;
+    padding: 20px 0;
+    position: relative;
+}
+.page-footer_mt {
+    margin-top: 13vw;
+}
+.page-footer__menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.page-footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px rem(102);
+}
+.page-footer__left-col {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.page-footer__logo-col {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0 10px;
+}
+.page-footer__right-col {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+
+}
+.page-footer__logo {
+    display: block;
+    text-align: center;
+    img {
+        max-width: rem(150);
+    }
+}
+.page-footer__menu {
+    margin: 0 rem(-15);
+
+
+}
+.page-footer__menu-link {
+    font-weight: 500;
+    font-size: rem(20);
+    color: #fff;
+    padding: 10px rem(15);
+    display: inline-block;
+    vertical-align: top;
+    @include menu-hover();
+}
+.page-footer__copy {
+    color: #FFFFFF;
+}
+.page-footer__copy-text {
+    font-size: rem(18);
+    text-align: center;
+}
+.page-footer__link {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+}
+.page-footer__autor {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    color: #fff;
+    svg {
+        margin-top: rem(8);
+
+    }
+
+}
+.page-footer__mask {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    padding-bottom: 13%;
+    background: url(../img/general/footer-mask.png);
+    background-size: 100% 100%;
+}
+@include media-breakpoint-down(md) {
+    .page-footer__logo-col {
+        order: -5;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .page-footer__left-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .page-footer__right-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .page-footer__row {
+        margin-bottom: 30px;
+    }
+
+}
+@include media-breakpoint-down(xs) {
+    .page-footer__link {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+}

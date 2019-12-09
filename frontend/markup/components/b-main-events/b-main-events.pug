@@ -1,0 +1,66 @@
+mixin b-main-events(data)
+    +b.b-main-events
+        .container
+            +e.cloud.bvi-hide
+            +e.IMG.deer.bvi-hide(src='__static__img/general/deer.png')
+            .row
+                .col-md-6(data-aos="fade-right")
+                    +e.pre-title АФИША
+                    +e.title МЕРОПРИЯТИЯ<br> НА НОВЫЙ ГОД
+                    +e.A.btn(href='#') Смотреть все
+                    +e.form
+                        +e.form-item
+                            .form-label Что
+                            select.selectric( multiple )
+                                option(disabled)
+                                option Елка
+                                option Елка
+                                option Елка
+                                option Елка
+                        +e.form-item
+
+                            .form-group
+                                .form-label Когда
+                                .form-group__cont.form-group__cont_ico-right
+                                    input.form-control.form-control_blue.datepicker-here(
+                                        data-multiple-dates-separator=" - "
+                                        data-range='true'
+                                        data-show-event='click'
+                                    )
+                                    .form-group__ico
+                                        img(src='__static__img/general/calendar.svg')
+                        +e.form-item._mb
+                            .form-label Где
+                            select.selectric(data-placeholder='Где' multiple )
+                                option(disabled)
+                                option Центральная площадь
+                                option Центральная площадь
+                                option Центральная площадь
+                                option Центральная площадь
+                        +e.form-item
+                            label.checkbox.checkbox_white
+                                input(type='checkbox', checked='')
+                                span Бесплатно
+                        +e.form-item
+                            label.checkbox.checkbox_white
+                                input(type='checkbox', checked='')
+                                span В помещении
+                        +e.BUTTON.form-btn(type='submit') Подобрать
+
+
+
+                .col-md-6()
+                    +e.list
+                        each i in ([1,2,3,4])
+                            +e.A.item(href='#' data-aos="fade-left" data-aos-delay=`${i*100}`)
+                                +e.DIV.top
+                                    +e.date 17 декабря
+                                    +e.icons
+                                        +e.ico(title='В помещении')
+                                            img(src='__static__img/content/i1.svg')
+                                        +e.ico(title='Платно')
+                                            img(src='__static__img/content/i2.svg')
+                                +e.DIV.name Хоровод под елкой всем городом
+                                +e.DIV.loc
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'loc'})
+                                    | Центральная площадь

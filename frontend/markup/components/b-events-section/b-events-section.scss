@@ -1,0 +1,21 @@
+.b-events-section {
+    padding: rem(70) 0 0;
+    background: linear-gradient(to bottom, #f9fafe 0%, #fff 100%);
+
+
+}
+.b-events-section__title {
+    @include title2;
+    text-align: center;
+    margin-bottom: rem(40);
+}
+.b-events-section__filter {
+    margin-bottom: rem(56);
+}
+.b-events-section__list {
+    margin-bottom: rem(40);
+}
+.b-events-section__pagination {
+
+}
+

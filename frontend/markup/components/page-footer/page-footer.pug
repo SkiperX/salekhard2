@@ -1,0 +1,34 @@
+
+
+mixin page-footer(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n=> mode+= `_${n} `)
+
+    +b.page-footer(class=mode)
+        +e.mask
+        .container
+            +e.row
+                +e.left-col
+                    +e.menu
+                        +e.A.menu-link(href='#') О проекте
+                        +e.A.menu-link(href='#') Афиша
+                        +e.A.menu-link(href='#') Туры
+                +e.logo-col
+                    +e.A.logo(href='/')
+                        img(src='__static__/img/general/footer-logo.png')
+                +e.right-col
+                    +e.menu
+                        +e.A.menu-link(href='#') Новости
+                        +e.A.menu-link(href='#') Галерея
+                        +e.A.menu-link(href='#') Контакты
+
+            +e.copy
+                .row
+                    .col-md-6
+                        +e.copy-text © 2019 — 2021 Салехард
+                    .col-md-6
+                        +e.link(href='#') Политика конфиденциальности
+

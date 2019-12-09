@@ -1,0 +1,14 @@
+include ../b-ico-list/b-ico-list
+mixin b-info(data)
+    +b.b-info
+        +e.IMG.chum.bvi-hide(src='__static__img/general/chum.png')
+        .container
+            +e.cloud
+
+            +e.label(data-aos="fade-up") О ГОРОДЕ
+            +e.title(data-aos="fade-up") НЕМНОГО ИНФОГРАФИКИ
+            +e.items
+                +b-ico-list
+
+            .text-center
+                +e.A.btn(href='#' data-aos="fade-up") Узнать больше

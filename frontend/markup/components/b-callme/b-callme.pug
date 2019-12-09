@@ -1,0 +1,42 @@
+mixin b-callme(data)
+    +b.b-callme
+        form(action='').send-form
+            .row
+                .col-md-6
+                    +e.item
+
+                        label.form-group
+                            .form-label ФИО
+                            .form-group__ico-cont
+                                input.form-control(type='text')
+                                img.form-group__ico(src='%=static=%img/general/person.svg', alt='')
+                    +e.item
+                        label.form-group
+                            .form-label Телефон
+                            .form-group__ico-cont
+                                input.form-control(type='tel')
+                                img.form-group__ico(src='%=static=%img/general/tel.svg', alt='')
+                    +e.item
+                        label.form-group
+                            .form-label E-mail
+                            .form-group__ico-cont
+                                input.form-control(type='mail')
+                                img.form-group__ico(src='%=static=%img/general/mail.svg', alt='')
+                .col-md-6
+                    +e.col-right
+                        +e.file-btn
+                            .input-file
+                                label.js-labelFile
+                                    input(type='file' multiple)
+                                    span.js-fileName
+                                        !=  pugHelpers.Icon.call(locals, {iconName: 'load'})
+                                        | Прикрепить документ
+                                .file-list
+
+                        +e.politica.form-group
+
+                            label.checkbox
+                                input(type='checkbox', checked='')
+                                span
+                                    | Отправляя информацию, вы соглашаетесь с <a href='#' target='_blank'> обработкой персональных данных</a>
+                        +e.BUTTON.btn(type='submit') Получить расчет

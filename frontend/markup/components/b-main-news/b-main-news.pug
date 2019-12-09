@@ -1,0 +1,53 @@
+mixin b-main-news(data)
+    +b.b-main-news
+        .container
+            .text-center
+                +e.pre-title(data-aos="fade-up" data-aos-delay="50") НОВОСТИ
+                +e.title(data-aos="fade-up" data-aos-delay="150") БУДЬ В КУРСЕ
+                +e.text(data-aos="fade-up" data-aos-delay="250")
+                    p.
+                        Всегда хотели прокатиться на оленях или посмотреть<br>
+                        на северное сияние?<br>
+                        Тогда Вы попали куда надо!
+                +e.A.btn(href='#' data-aos="fade-up" data-aos-delay="350") Смотреть все
+            +e.list(data-scrollax-parent='true' data-aos="fade-up" data-aos-delay="450")
+                .row
+                    .col-lg-4
+                        +e.A.item(href='#' data-scrollax="properties: {translateY: '30%'}")
+                            +e.DIV.img-cont.bvi-hide
+                                +e.DIV.img(style='background-image: url(__static__img/content/n1.jpg)')
+                            +e.DIV.ornament
+                                +e.DIV.ornament-bg.bvi-hide
+                                +e.date 17 декабря
+                            +e.DIV.content
+                                +e.name НАЗВАНИЕ НОВОСТИ
+                                +e.desc Описание новостиОписание новостиОписание новостиОписание новостиОписание
+                                +e.link Читать далее
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+                    .col-lg-4
+                        +e.A.item(href='#' data-scrollax="properties: {translateY: '-30%'}")
+                            +e.DIV.img-cont.bvi-hide
+                                +e.DIV.img(style='background-image: url(__static__img/content/n1.jpg)')
+                            +e.DIV.ornament
+                                +e.DIV.ornament-bg.bvi-hide
+                                +e.date 17 декабря
+                            +e.DIV.content
+                                +e.name НАЗВАНИЕ НОВОСТИ
+                                +e.desc Описание новостиОписание новостиОписание новостиОписание новостиОписание
+                                +e.link Читать далее
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+                    .col-lg-4
+                        +e.A.item(href='#' data-scrollax="properties: {translateY: '30%'}")
+                            +e.DIV.img-cont.bvi-hide
+                                +e.DIV.img(style='background-image: url(__static__img/content/n1.jpg)')
+                            +e.DIV.ornament
+                                +e.DIV.ornament-bg.bvi-hide
+                                +e.date 17 декабря
+                            +e.DIV.content
+                                +e.name НАЗВАНИЕ НОВОСТИ
+                                +e.desc Описание новостиОписание новостиОписание новостиОписание новостиОписание
+                                +e.link Читать далее
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+
+
+

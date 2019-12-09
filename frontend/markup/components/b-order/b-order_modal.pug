@@ -1,0 +1,109 @@
+mixin b-order_modal(data)
+    +b.b-order._modal
+        form.send-form
+            +e.radio-group
+                +e.radio-item
+                    label.radio
+                        input(type='radio', name='qw' )
+                        span Однодневный
+                +e.radio-item
+                    label.radio
+                        input(type='radio', name='qw' checked='')
+                        span Двухдневный
+
+            +e.row.row
+                .col-md-6
+                    +e.item
+                        .form-group
+                            .form-label Дата
+                            .row
+                                .col-sm-6
+                                    .form-group__cont.form-group__cont_ico-right
+                                        input.form-control.datepicker-here(
+
+                                        data-show-event='click'
+                                        )
+                                        .form-group__ico
+                                            img(src='__static__img/general/calendar-blue.svg')
+                                .col-sm-6
+                                    .form-group__cont.form-group__cont_ico-right
+                                        input.form-control.datepicker-here(
+
+                                        data-show-event='click'
+                                        )
+                                        .form-group__ico
+                                            img(src='__static__img/general/calendar-blue.svg')
+
+                    +e.item
+                        .form-label Время
+                        select.selectric()
+                            option(disabled)
+                            option 00-12
+                            option 12-18
+                            option 18-24
+                    +e.item
+                        .form-group
+                            .form-label Количество участников
+                            .form-group__cont.form-group__cont_ico.form-group__cont_ico-left
+                                input.form-control(type='number')
+                                .form-group__ico
+                                    img(src='__static__img/content/i7.svg')
+
+                    +e.item
+                        .form-group
+                            .form-label Количество детей до 18 лет
+                            .form-group__cont.form-group__cont_ico.form-group__cont_ico-left
+                                input.form-control(type='number')
+                                .form-group__ico
+                                    img(src='__static__img/content/i7.svg')
+
+
+                    +e.item
+                        .form-group
+                            .form-label ФИО
+                            .form-group__cont.form-group__cont_ico.form-group__cont_ico-left
+                                input.form-control()
+                                .form-group__ico
+                                    img(src='__static__img/content/i7.svg')
+
+                    +e.item
+                        .form-group
+                            .form-label Телефон
+                            .form-group__cont.form-group__cont_ico.form-group__cont_ico-left
+                                input.form-control(type='tel')
+                                .form-group__ico
+                                    img(src='__static__img/content/i8.svg')
+
+                    +e.item
+                        .form-group
+                            .form-label E-mail
+                            .form-group__cont.form-group__cont_ico.form-group__cont_ico-left
+                                input.form-control(type='mail')
+                                .form-group__ico
+                                    img(src='__static__img/content/i10.svg')
+                .col-md-6
+                    +e.item
+                        .form-group
+                            .form-label.form-label_mb Дополнительно
+                            +e.check-item
+                                label.checkbox
+                                    input(type='checkbox', checked='')
+                                    span Елка
+                            +e.check-item
+                                label.checkbox
+                                    input(type='checkbox', checked='')
+                                    span Бесплатный гид
+                            +e.check-item
+                                label.checkbox
+                                    input(type='checkbox', checked='')
+                                    span Елка
+
+
+                .col-md-6
+                    +e.BUTTON.btn(type='submit') Отправить
+                    +e.politica
+
+                                label.checkbox.checkbox_light-text
+                                    input(type='checkbox', checked='')
+                                    span Отправляя информацию, вы соглашаетесь с <a href='#' target="_blank">обработкой персональных данных</a>
+

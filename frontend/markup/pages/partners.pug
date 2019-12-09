@@ -1,0 +1,33 @@
+//- Партнеры
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro-simple/b-intro-simple
+include ../components/b-logos-section/b-logos-section
+
+block vars
+    - var title = 'Партнеры'
+
+block content
+    .page__header
+        +page-header({
+
+        })
+    .page__wrapper
+        .page__b-intro-simple
+            +b-intro-simple({
+                title: 'Партнеры'
+            })
+        .page__b-logos-section
+            +b-logos-section
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

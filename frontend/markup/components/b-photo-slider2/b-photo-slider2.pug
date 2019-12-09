@@ -1,0 +1,16 @@
+mixin b-photo-slider2(data)
+    +b.b-photo-slider2
+        .swiper-container
+            .swiper-wrapper.lightgallery
+                each i in (new Array(4))
+                    .swiper-slide
+                        +e.slide
+                            +e.A.link(href='https://placehold.it/600x900.jpg')
+                                +e.DIV.img(style=`background-image: url(__static__img/content/s1.jpg)`)
+
+
+
+        .swiper-button-next.swiper-button-white
+            !=  pugHelpers.Icon.call(locals, {iconName: 'swiper'})
+        .swiper-button-prev.swiper-button-white
+            !=  pugHelpers.Icon.call(locals, {iconName: 'swiper'})

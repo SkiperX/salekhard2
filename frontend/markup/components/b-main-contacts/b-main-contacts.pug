@@ -1,0 +1,17 @@
+include ../b-contacts/b-contacts
+
+mixin b-main-contacts(data)
+    +b.b-main-contacts
+        .container
+            +e.violet
+                +e.content
+                    +b-contacts
+
+            +e.logos
+                .row
+                    .col-6
+                        +e.logo
+                            img(src='__static__img/content/g1.png')
+                    .col-6
+                        +e.logo
+                            img(src='__static__img/content/g2.png')

@@ -1,0 +1,67 @@
+
+
+mixin page-header(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n=> mode+= `_${n} `)
+    +b.page-header(
+    class=mode
+    )
+        .container
+            +e.row
+                +e.col-left
+                    +e.A.glass.js-bvi-init.bvi-open(href='#' title='Версия для слабовидящих')
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'glass1'})
+                    +e.search.bvi-hide
+                        +e.FORM.search-form
+                            +e.search-cont
+                                +e.INPUT.search-control(type='text' name='q')
+                                +e.BUTTON.search-btn
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'search'})
+                    +e.menu
+                        +e.A.menu-link(href='#') О САЛЕХАРДЕ
+                        +e.A.menu-link(href='#') АФИША
+                        +e.A.menu-link(href='#') ТУРЫ
+                +e.col-logo
+                    +e.A.logo.bvi-hide(href='/')
+                        +e.IMG.logo-full(src='__static__img/general/logo.svg')
+                        +e.IMG.logo-small(src='__static__img/general/logo2.png')
+                +e.col-right
+                    +e.menu
+                        +e.A.menu-link(href='#') ГАЛЕРЕЯ
+                        +e.A.menu-link(href='#') НОВОСТИ
+                        +e.A.menu-link(href='#') КАРТА
+                        +e.A.menu-link(href='#') КОНТАКТЫ
+
+                    +e.lang
+                        select.selectric
+                            option RU
+                            option EN
+                    +e.burger
+                        .gamburger.js-menu
+                            span.gamburger-line1
+                            span.gamburger-line2
+                            span.gamburger-line3
+        +e.mobile-toggle
+            .container
+                +e.mobile-top
+                    +e.A.glass.js-bvi-init.bvi-open(href='#' title='Версия для слабовидящих')
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'glass1'})
+                    +e.search.bvi-hide
+                        +e.FORM.search-form
+                            +e.search-cont
+                                +e.INPUT.search-control(type='text' name='q')
+                                +e.BUTTON.search-btn
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'search'})
+                +e.mobile-menu
+                    +e.A.menu-link(href='#') О САЛЕХАРДЕ
+                    +e.A.menu-link(href='#') АФИША
+                    +e.A.menu-link(href='#') ТУРЫ
+                    +e.A.menu-link(href='#') ГАЛЕРЕЯ
+                    +e.A.menu-link(href='#') НОВОСТИ
+                    +e.A.menu-link(href='#') КАРТА
+                    +e.A.menu-link(href='#') КОНТАКТЫ
+
+

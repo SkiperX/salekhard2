@@ -1,0 +1,37 @@
+mixin b-filter(data)
+    +b.b-filter
+        form
+            .row
+                .col-md-4
+                    +e.item
+                        .form-group
+                            .form-label Что
+                            select.selectric( multiple  )#sel
+                                option(disabled)
+                                option(value="t1") Елка
+                                option(value="t2") Елка
+                                option(value="t3") Елка
+                                option(value="t4") Елка
+                .col-md-4
+                    +e.item
+                        .form-group
+                            .form-label Когда
+                            .form-group__cont.form-group__cont_ico-right
+                                input.form-control.datepicker-here(
+                                data-multiple-dates-separator=" - "
+                                data-range='true'
+                                data-show-event='click'
+                                )
+                                .form-group__ico
+                                    img(src='__static__img/general/calendar-blue.svg')
+                .col-xl-4
+                    +e.options
+                        +e.options-item
+                            label.checkbox
+                                input(type='checkbox', checked='')
+                                span Бесплатно
+                        +e.options-item
+                            label.checkbox
+                                input(type='checkbox', checked='')
+                                span В помещении
+        +e.tags

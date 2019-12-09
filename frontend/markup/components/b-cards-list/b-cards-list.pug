@@ -1,0 +1,27 @@
+mixin b-cards-list(data)
+    - var data = data || {}
+    +b.b-cards-list
+        .container
+            +e.items
+                each item in data.items
+                    +e.A.item(href='#')
+                        div.row
+                            .col-md-6
+                                +e.DIV.col-left
+                                    +e.img-cont
+                                        +e.img(style=`background-image: url(${item.img})`)
+
+                                    if item.age
+                                        +e.age-cont
+                                            +e.age!=item.age
+                            .col-md-6
+                                +e.DIV.col-right
+                                    +e.date!=item.date
+                                    +e.title!=item.title
+                                    if item.price
+                                        +e.price
+                                            !=  pugHelpers.Icon.call(locals, {iconName: 'price'})
+                                            != item.price
+                                    +e.desc!=item.desc
+                                    +e.more Читать далее
+                                        !=  pugHelpers.Icon.call(locals, {iconName: 'more'})

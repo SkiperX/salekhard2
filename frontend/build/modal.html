@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Modal</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <link href="static/css/main.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+        <style>
+            body {
+                opacity: 0;
+            }
+        </style>
+    </head>
+
+    <body class="page">
+        <div class="container">
+            <p style="padding-top: 150px"><a href="#order" data-toggle="modal">Оформление заказа</a>
+            </p>
+            <!--p-->
+            <!--    a(href='#text', data-toggle='modal')-->
+            <!--        | Текст-->
+            <!-- Оформление заказа-->
+            <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-md" role="document">
+                    <div class="modal-content">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <svg class="icon__close" width="25px" height="25px">
+                                <use xlink:href="svg-symbols.svg#close"></use>
+                            </svg>
+
+                        </button>
+                        <div class="modal-title">Оформление заказа</div>
+                        <div class="b-order b-order_modal">
+                            <form class="send-form">
+                                <div class="b-order__radio-group">
+                                    <div class="b-order__radio-item">
+                                        <label class="radio">
+                                            <input type="radio" name="qw" /><span>Однодневный</span>
+                                        </label>
+                                    </div>
+                                    <div class="b-order__radio-item">
+                                        <label class="radio">
+                                            <input type="radio" name="qw" checked="" /><span>Двухдневный</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="b-order__row row">
+                                    <div class="col-md-6">
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label">Дата</div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group__cont form-group__cont_ico-right">
+                                                            <input class="form-control datepicker-here" data-show-event="click" />
+                                                            <div class="form-group__ico">
+                                                                <img src="static/img/general/calendar-blue.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group__cont form-group__cont_ico-right">
+                                                            <input class="form-control datepicker-here" data-show-event="click" />
+                                                            <div class="form-group__ico">
+                                                                <img src="static/img/general/calendar-blue.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-order__item">
+                                            <div class="form-label">Время</div>
+                                            <select class="selectric">
+                                                <option disabled="disabled"></option>
+                                                <option>00-12</option>
+                                                <option>12-18</option>
+                                                <option>18-24</option>
+                                            </select>
+                                        </div>
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label">Количество участников</div>
+                                                <div class="form-group__cont form-group__cont_ico form-group__cont_ico-left">
+                                                    <input class="form-control" type="number" />
+                                                    <div class="form-group__ico">
+                                                        <img src="static/img/content/i7.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label">Количество детей до 18 лет</div>
+                                                <div class="form-group__cont form-group__cont_ico form-group__cont_ico-left">
+                                                    <input class="form-control" type="number" />
+                                                    <div class="form-group__ico">
+                                                        <img src="static/img/content/i7.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label">ФИО</div>
+                                                <div class="form-group__cont form-group__cont_ico form-group__cont_ico-left">
+                                                    <input class="form-control" />
+                                                    <div class="form-group__ico">
+                                                        <img src="static/img/content/i7.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label">Телефон</div>
+                                                <div class="form-group__cont form-group__cont_ico form-group__cont_ico-left">
+                                                    <input class="form-control" type="tel" />
+                                                    <div class="form-group__ico">
+                                                        <img src="static/img/content/i8.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label">E-mail</div>
+                                                <div class="form-group__cont form-group__cont_ico form-group__cont_ico-left">
+                                                    <input class="form-control" type="mail" />
+                                                    <div class="form-group__ico">
+                                                        <img src="static/img/content/i10.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="b-order__item">
+                                            <div class="form-group">
+                                                <div class="form-label form-label_mb">Дополнительно</div>
+                                                <div class="b-order__check-item">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" checked="" /><span>Елка</span>
+                                                    </label>
+                                                </div>
+                                                <div class="b-order__check-item">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" checked="" /><span>Бесплатный гид</span>
+                                                    </label>
+                                                </div>
+                                                <div class="b-order__check-item">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" checked="" /><span>Елка</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="b-order__btn" type="submit">Отправить
+                                        </button>
+                                        <div class="b-order__politica">
+                                            <label class="checkbox checkbox_light-text">
+                                                <input type="checkbox" checked="" /><span>Отправляя информацию, вы соглашаетесь с <a href='#' target="_blank">обработкой персональных данных</a></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                window.addEventListener("load", function (event) {
+                    $("#order").modal('show');
+                });
+            </script>
+        </div>
+        <a class="page-up bvi-hide">
+            <div class="page-up__inner">
+                <svg class="icon__up" width="21px" height="24px">
+                    <use xlink:href="svg-symbols.svg#up"></use>
+                </svg>
+
+                <div class="page-up__text">Наверх</div>
+            </div>
+        </a>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="static/js/vendor.js"></script>
+        <script src="static/js/main.js"></script>
+    </body>
+
+</html>

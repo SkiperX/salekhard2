@@ -1,0 +1,36 @@
+//- Афиша
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer
+include ../components/b-intro/b-intro_right-col
+include ../components/b-events-section/b-events-section
+
+block vars
+    - var title = 'Афиша'
+
+block content
+    .page__header
+        +page-header({
+            modeList: ['abs']
+        })
+    .page__wrapper
+        .page__b-intro
+            +b-intro_right-col({
+                modeList: ['text-right'],
+                bg: '__static__img/content/events-bg.jpg',
+                title: 'Афиша',
+                text: '<p>Салеха́рд — город в России, административный центр Ямало-Ненецкого автономного округа.</p>'
+            })
+        .page__b-events-section
+            +b-events-section
+
+
+
+    .page__footer
+        +page-footer({
+            modeList: ['mt']
+        })
+
+
+

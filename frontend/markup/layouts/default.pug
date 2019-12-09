@@ -1,0 +1,27 @@
+doctype html
+html(class="no-js", lang="ru")
+    block vars
+
+    include ../components/head/head.pug
+    include ../components/footer/footer.pug
+    include ../../node_modules/bemto.pug/bemto.pug
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+
+
+
+        block content
+
+        a.page-up.bvi-hide
+            div.page-up__inner
+                !=  pugHelpers.Icon.call(locals, {iconName: 'up'})
+                div.page-up__text Наверх
+
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+        script(src='%=static=%js/vendor.js')
+        script(src='%=static=%js/main.js')

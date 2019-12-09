@@ -1,0 +1,15 @@
+include ../b-pagination/b-pagination
+
+mixin b-gallery(data)
+    +b.b-gallery
+        .container
+            +e.title Галерея
+            +e.btns
+                +e.A.btn._active(href='#') Фото
+                +e.A.btn(href='#') Видео
+            +e.gallery.lightgallery
+                each i in [1,2,3,4,5,6,7,8,9]
+                    +e.A.link(href='http://placehold.it/600x900.jpg')
+                        +e.DIV.img(style=`background-image: url(__static__img/content/ga${i}.jpg)`)
+            +e.pagination
+                +b-pagination

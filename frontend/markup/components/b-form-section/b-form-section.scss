@@ -1,0 +1,43 @@
+.b-form-section {
+  background: #434343;
+  padding: rem(44) 0 rem(60);
+}
+.b-form-section__title {
+  font-size: rem(24);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  margin-bottom: rem(11);
+}
+.b-form-section__title2 {
+  font-weight: 600;
+  font-size: rem(40);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  margin-bottom: rem(41);
+}
+.b-form-section__text {
+  background: rgba(#5C5C5C, 0.9);
+  padding: rem(20) rem(30);
+  line-height: 1.6;
+  font-size: 15px;
+  color: #FFFFFF;
+  font-family: $openSans;
+}
+.form-group__ico {
+
+}
+.b-form-section__spda {
+  margin-bottom: rem(22);
+}
+.b-form-section__btn {
+  @include btn;
+}
+@include media-breakpoint-down(md) {
+  .b-form-section__text {
+    margin-bottom: rem(30);
+  }
+}

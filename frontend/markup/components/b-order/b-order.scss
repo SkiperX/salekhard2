@@ -1,0 +1,45 @@
+.b-order {
+    @include white-select;
+    &_modal {
+
+    }
+}
+.b-order__row {
+    @include media-breakpoint-up(lg) {
+        margin: 0 -100px;
+        &>div {
+            padding: 0 100px;
+        }
+    }
+}
+.b-order__item {
+    margin-bottom: rem(30);
+}
+.b-order__btn {
+    @include btn;
+    @include btn-green;
+    margin: rem(30) 0 rem(50);
+}
+.b-order__politica {
+
+}
+
+
+.b-order__radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px -15px;
+}
+.b-order__radio-item {
+    margin: 15px;
+}
+
+.b-order__check-item {
+    margin-bottom: 25px;
+}
+@include media-breakpoint-down(xs) {
+    .b-order__btn {
+        width: 100%;
+    }
+}

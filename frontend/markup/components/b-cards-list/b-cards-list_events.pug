@@ -1,0 +1,45 @@
+mixin b-cards-list_events(data)
+    - var data = data || {}
+    +b.b-cards-list._events
+        .container
+            +e.items
+                each item in data.items
+                    +e.A.item(href='#')
+                        div.row.no-gutters
+                            .col-md-5
+                                +e.DIV.col-right
+                                    +e.top
+                                        +e.date!=item.date
+                                        +e.icons
+                                            +e.ico.js-tooltip(data-tippy-content='В помещении')
+                                                img(src='__static__img/content/i1.svg')
+                                            +e.ico.js-tooltip(data-tippy-content='Платно')
+                                                img(src='__static__img/content/i2.svg')
+                                    +e.title!=item.title
+
+                                    +e.info
+                                        .row
+                                            .col-6
+                                                +e.loc
+                                                    svg.icon__pin2(width='17px', height='22px')
+                                                        !=  pugHelpers.Icon.call(locals, {iconName: 'pin2'})
+                                                    |  Центральная площадь
+                                            .col-6
+                                                +e.time
+                                                    svg.icon__time(width='18px', height='18px')
+                                                        !=  pugHelpers.Icon.call(locals, {iconName: 'time'})
+                                                    | 15:00-17:00
+
+
+                                    +e.desc!=item.desc
+                                    +e.more Читать далее
+                                        !=  pugHelpers.Icon.call(locals, {iconName: 'more'})
+                            +e.img-col.col-md-7
+                                +e.DIV.col-left
+                                    +e.img-cont
+                                        +e.img(style=`background-image: url(${item.img})`)
+                                        +e.type Лучший выбор
+                                    if item.age
+                                        +e.age-cont
+                                            +e.age!=item.age
+
